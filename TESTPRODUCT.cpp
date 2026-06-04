@@ -34,7 +34,7 @@ int main(){
             printf("Error opening file\n");
             break;
         }
-        printf("Enter Product Code: prod");
+        printf("Enter Product Code: ");
         scanf("%s", prod_code);
         printf("Enter Product Description: ");
         scanf("%s", prod_desc);
@@ -74,7 +74,7 @@ int main(){
         while(fscanf(fp, " %[^,],%[^,],%d", tcode, tdesc, &q) != EOF){
             if(strcmp(tcode, prod_code) == 0){
                 found = 1;
-                printf("Product Code: %s\nProduct Name: %s\nAvailable Quantity: %d\n", tcode, tdesc, q);
+                printf("Product Name: %s\nAvailable Quantity: %d\n", tdesc, q);
                 printf("Transaction [Purchase/Sold]: ");
                 scanf("%s", trans);
                 printf("Quantity to Purchase/Sold: ");
@@ -157,6 +157,8 @@ int main(){
         }
         break;
 
+	default:
+		printf("Invalid input, please try again.\n");
     }//switch
 
     }while(confirm != 'Y' && choice != 'y'); //do
