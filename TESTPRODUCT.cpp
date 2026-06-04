@@ -48,7 +48,7 @@ int main(){
     case 'v':
         fp=fopen("C:\\Users\\Kaisha Inocencio\\Documents\\g7\\productt.txt", "r");
         if (!fp){
-            printf("No records found!\n");
+            printf("Error opening file!\n");
             break;
         }
         printf("%-16s %-23s %s\n", "Product Code", "Product Description", "Available Quantity");
@@ -139,7 +139,7 @@ int main(){
         rename("C:\\Users\\Kaisha Inocencio\\Documents\\g7\\temp.txt", "C:\\Users\\Kaisha Inocencio\\Documents\\g7\\productt.txt");
 
         if(!found){
-            printf("Record not found\n");
+            printf("Record not found\n"); 	
         }
         break;
 
@@ -152,12 +152,13 @@ int main(){
             exit(0);
         } else {
             printf("Exit cancelled\n");
+            continue;
         }
         break;
 
     }//switch
 
-    }while(choice != 'X' && choice != 'x'); //do
+    }while(confirm != 'Y' && choice != 'y'); //do
 
 return 0;
 }
