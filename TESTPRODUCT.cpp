@@ -20,6 +20,7 @@ int main(){
     fclose(fp);
 
     do{
+    	printf("\nPRODUCT MANAGEMENT\n");
         printf("\n[A]dd\n[E]dit\n[D]elete\n[V]iew\nE[X]it\n");
         printf("Please select one: ");
         scanf(" %c", &choice);
