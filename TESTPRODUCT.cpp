@@ -34,7 +34,7 @@ int main(){
             printf("Error opening file\n");
             break;
         }
-        printf("Enter Product Code: ");
+        printf("Enter Product Code: prod");
         scanf("%s", prod_code);
         printf("Enter Product Description: ");
         scanf("%s", prod_desc);
